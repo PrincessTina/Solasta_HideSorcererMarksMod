@@ -1,0 +1,6 @@
+Log.txt
+*.zip
+
+.vs/
+bin/
+obj/
