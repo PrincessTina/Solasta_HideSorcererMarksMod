@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Configuration;
 using HarmonyLib;
 using JetBrains.Annotations;
 using UnityModManagerNet;
@@ -12,8 +14,8 @@ namespace HideSorcererMarksMod
             try
             {
                 var harmony = new Harmony(modEntry.Info.Id);
+                FileLog.Reset();
                 harmony.PatchAll();
-
             }
             catch (Exception ex)
             {
@@ -26,7 +28,7 @@ namespace HideSorcererMarksMod
     }
 
     /*
-     * EXPLANATION
+     * EXPLANATION:
      * The necessity to replace default view of body decoration and eyes is set in morphotypeSubclassFilterTag flag 
      * (GraphicsDefinitions.MorphotypeSubclassFilterTag) for Sorcerer based characters. For example, morphotypeSubclassFilterTag
      * equals to "SorcererManaPainter" for corresponding subclass and so on for other Sorcerer's subclasses, while for other 
@@ -38,9 +40,9 @@ namespace HideSorcererMarksMod
      * this mod can be deleted after character's creation.
      */
     [HarmonyPatch(typeof(CharacterBuildingManager), nameof(CharacterBuildingManager.BuildMorphotypeOptionsList))]
-    static class Patch
+    static class Patch_HideSorcererMarks
     {
-        static void Prefix(ref CharacterSubclassDefinition? subClass)
+        static void Prefix(ref CharacterSubclassDefinition subClass)
         {
             subClass = null;
         }
