@@ -9,7 +9,8 @@ Allows you to create your new Sorcerer character without Sorcerer specific marki
   - Select _Solasta_ from the list of available games.
   - Select the game folder in case UMM fails to auto detect it.
   - Select _DoorstopProxy_ installation method, if it's available.
-* Install Solasta_HideSorcererMarksMod: drag and drop downloaded HideSorcererMarksMod.zip over the UMM's "Mods" tab. If everything went well, the mod should appear with green status indicator in UMM window with list of all installed mods on game start. You may deinstall this mod in UMM after completing character's creation, since you only need its logic due character's creation.
+  - Click _Install_ button.
+* Install Solasta_HideSorcererMarksMod: drag and drop downloaded HideSorcererMarksMod.zip over the UMM's "Mods" tab. If everything went well, you will see "OK" status in the window and the mod should appear with green status indicator in UMM window with list of all installed mods on game start. You may uninstall this mod in UMM after completing character's creation, since you only need its logic due character's creation.
 
 ## How to modify mod's code
 * You will need installed Unity Mod Manager, Visual Studio Community 2022 with components for .NET and Unity games development. Current target .NET framework is .NET 4.8.1.
